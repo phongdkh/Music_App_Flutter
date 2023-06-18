@@ -25,9 +25,15 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
 
   @override
   Widget build(BuildContext context) {
+
+    // MediaQueryData queryData = MediaQuery.of(context);
+    // final width = MediaQuery.of(context).size.width;
+    // final height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amberAccent[200],
+        //backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
         leading: InkWell(
@@ -56,10 +62,23 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
       ),
       body: Stack(
         children: [
+          // Container(
+          //   width: width,
+          //   height: height / 2.4,
+          //   decoration: const BoxDecoration(
+          //       color: Colors.orangeAccent,
+          //       borderRadius: BorderRadius.only(
+          //           bottomRight: Radius.circular(1000),
+          //           bottomLeft: Radius.circular(1000))),
+          // ),
+          // Positioned(
+          //     top: 0,
+          //     right: 0,
+          //     child: Image.asset("assets/icons/Rectangle.png")),
           Container(
-              width: 320,
+            alignment: Alignment.center,
               height: 340,
-              child: Image.asset('assets/icons/Rectangle.png', fit: BoxFit.cover)),
+              child: Image.asset('assets/images/Rectangle.png', fit: BoxFit.cover)),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -91,6 +110,9 @@ class _MusicDetailPageState extends State<MusicDetailPage> {
                   ),
                 ),
               ),
+              // Center(
+              //   child: WaveProgressBar,
+              // ),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 30.0, right: 10.0),
